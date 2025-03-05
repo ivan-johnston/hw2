@@ -1,0 +1,54 @@
+--- Enter TestFloatingPointOutput.main()     ... 
+--- ======================================== ... 
+--- Part 1: Demo floating point formats ...
+---   Maximum detail --> 3.1415926535897931
+---   Print 2 decimal places of accuracy --> 3.14
+---   Print 3 decimal places of accuracy --> 3.142
+---   Print 4 decimal places of accuracy --> 3.1416
+---   Print 5 decimal places of accuracy --> 3.14159
+--- Part 2: Round floating point formats ...
+---   Round number (1 decimal places) --> 3.100000
+---   Round number (2 decimal places) --> 3.140000
+---   Round number (3 decimal places) --> 3.142000
+---   Round number (4 decimal places) --> 3.141600
+---   Round number (5 decimal places) --> 3.141590
+--- Part 3: Demo exponential formats ...
+---   pi --> 3.14e+00
+---   pi --> 3.1416e+00
+--- 
+--- Part 4: Format array of numbers in exponential format ...
+--- 
+---   3.423000e+01
+---  -1.233350e-01
+---   1.000000e+00
+---   2.422300e+01
+---   3.449685e+06
+--- 
+--- Part 5: Print array of comma-separated numbers ...
+--- 
+---         34.230
+---         -0.123
+---          1.000
+---         24.223
+---  3,449,685.100
+--- 
+--- Part 6: Demo conversion of basis ...
+--- 
+--- 
+--- Print 21 in decimal, hexidecimal, octal and binary formats ...
+--- 21 - 15 - 25 - 10101 
+--- 
+--- Part 7: Demo multiple substitutions ...
+--- 
+--- cats and dogs living together 
+--- cats and dogs living together  
+--- 
+--- Part 8: Format table data ...
+--- ===================================== ...
+| Andre Iguodala   |  4 |  3 |  7 |
+| Klay Thompson    |  5 |  0 | 21 |
+| Stephen Curry    |  5 |  8 | 36 |
+| Draymon Green    |  9 |  4 | 11 |
+| Andrew Bogut     |  3 |  0 |  2 |
+--- ======================================== ... 
+--- Leave TestFloatingPointOutput.main()     ... 

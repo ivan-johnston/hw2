@@ -1,0 +1,199 @@
+--- Enter TestMarylandAirports01.main()               ... 
+--- ================================================= ... 
+
+--- 
+--- Part 01: Load airports data file ... 
+--- 
+--- 
+--- Airport dataframe description ... 
+--- 
+          latitude    longitude
+count  3376.000000  3376.000000
+mean     40.036524   -98.621205
+std       8.329559    22.869458
+min       7.367222  -176.646031
+25%      34.688427  -108.761121
+50%      39.434449   -93.599425
+75%      43.372612   -84.137519
+max      71.285448   145.621384
+--- 
+--- Airport dataframe info and shape ... 
+--- 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3376 entries, 0 to 3375
+Data columns (total 7 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   iata       3376 non-null   object 
+ 1   name       3376 non-null   object 
+ 2   city       3364 non-null   object 
+ 3   state      3364 non-null   object 
+ 4   country    3376 non-null   object 
+ 5   latitude   3376 non-null   float64
+ 6   longitude  3376 non-null   float64
+dtypes: float64(2), object(5)
+memory usage: 184.8+ KB
+None
+(3376, 7)
+--- 
+--- Part 02: Extract and print airports located in Maryland ... 
+--- 
+     iata                                     name  ...   latitude  longitude
+250   2G4                           Garrett County  ...  39.580278 -79.339417
+289   2W5                                 Maryland  ...  38.600537 -77.072969
+290   2W6     Captain Walter Francis Duke Regional  ...  38.315361 -76.550111
+1030  BWI       Baltimore-Washington International  ...  39.175402 -76.668198
+1070  CBE                      Cumberland Regional  ...  39.615417 -78.760864
+1103  CGE                     Cambridge-Dorchester  ...  38.539306 -76.030361
+1106  CGS                             College Park  ...  38.980583 -76.922306
+1286  DMW                           Carroll County  ...  39.608278 -77.007667
+1418  ESN                           Easton /Newnam  ...  38.804167 -76.069000
+1498  FDK                      Frederick Municipal  ...  39.417583 -77.374306
+1525  FME                                   Tipton  ...  39.085387 -76.759414
+1576  GAI                    Montgomery Co Airpark  ...  39.168336 -77.166000
+1712  HGR       Hagerstown Regional-Richard Henson  ...  39.707944 -77.729500
+2334  MTN                             Martin State  ...  39.325663 -76.413766
+2559  OXB                               Ocean City  ...  38.310444 -75.123972
+2896  SBY  Salisbury-Ocean City: Wicomico Regional  ...  38.340526 -75.510288
+3269  W29                    Bay Bridge Industrial  ...  38.976389 -76.329639
+3273  W41                      Crisfield Municipal  ...  38.016790 -75.828821
+
+[18 rows x 7 columns]
+<class 'pandas.core.frame.DataFrame'>
+Index: 18 entries, 250 to 3273
+Data columns (total 7 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   iata       18 non-null     object 
+ 1   name       18 non-null     object 
+ 2   city       18 non-null     object 
+ 3   state      18 non-null     object 
+ 4   country    18 non-null     object 
+ 5   latitude   18 non-null     float64
+ 6   longitude  18 non-null     float64
+dtypes: float64(2), object(5)
+memory usage: 1.1+ KB
+None
+(18, 7)
+--- 
+--- Part 03: Print individual rows of dfMD ... 
+--- 
+--- 
+--- Item  Iata  Aiport Name                              City          Latitude/Longitude      ...
+--- ========================================================================================== ... 
+---    1:  2G4, Garrett County                         , Oakland       (39.580278, -79.339417) ... 
+---    2:  2W5, Maryland                               , Indian Head   (38.600537, -77.072969) ... 
+---    3:  2W6, Captain Walter Francis Duke Regional   , Leonardtown   (38.315361, -76.550111) ... 
+---    4:  BWI, Baltimore-Washington International     , Baltimore     (39.175402, -76.668198) ... 
+---    5:  CBE, Cumberland Regional                    , Cumberland    (39.615417, -78.760864) ... 
+---    6:  CGE, Cambridge-Dorchester                   , Cambridge     (38.539306, -76.030361) ... 
+---    7:  CGS, College Park                           , College Park  (38.980583, -76.922306) ... 
+---    8:  DMW, Carroll County                         , Westminster   (39.608278, -77.007667) ... 
+---    9:  ESN, Easton /Newnam                         , Easton        (38.804167, -76.069000) ... 
+---   10:  FDK, Frederick Municipal                    , Frederick     (39.417583, -77.374306) ... 
+---   11:  FME, Tipton                                 , Odenton       (39.085387, -76.759414) ... 
+---   12:  GAI, Montgomery Co Airpark                  , Gaithersburg  (39.168336, -77.166000) ... 
+---   13:  HGR, Hagerstown Regional-Richard Henson     , Hagerstown    (39.707944, -77.729500) ... 
+---   14:  MTN, Martin State                           , Baltimore     (39.325663, -76.413766) ... 
+---   15:  OXB, Ocean City                             , Ocean City    (38.310444, -75.123972) ... 
+---   16:  SBY, Salisbury-Ocean City: Wicomico Regional, Salisbury     (38.340526, -75.510288) ... 
+---   17:  W29, Bay Bridge Industrial                  , Stevensville  (38.976389, -76.329639) ... 
+---   18:  W41, Crisfield Municipal                    , Crisfield     (38.016790, -75.828821) ... 
+--- ========================================================================================== ... 
+--- 
+--- 
+--- Part 04: Convert dfMD dataframe to list, then print ... 
+--- 
+--- 
+--- Item  Iata  Aiport Name                              City          Latitude/Longitude      ...
+--- ========================================================================================== ... 
+---    1:  2G4, Garrett County                         , Oakland       (39.580278, -79.339417) ... 
+---    2:  2W5, Maryland                               , Indian Head   (38.600537, -77.072969) ... 
+---    3:  2W6, Captain Walter Francis Duke Regional   , Leonardtown   (38.315361, -76.550111) ... 
+---    4:  BWI, Baltimore-Washington International     , Baltimore     (39.175402, -76.668198) ... 
+---    5:  CBE, Cumberland Regional                    , Cumberland    (39.615417, -78.760864) ... 
+---    6:  CGE, Cambridge-Dorchester                   , Cambridge     (38.539306, -76.030361) ... 
+---    7:  CGS, College Park                           , College Park  (38.980583, -76.922306) ... 
+---    8:  DMW, Carroll County                         , Westminster   (39.608278, -77.007667) ... 
+---    9:  ESN, Easton /Newnam                         , Easton        (38.804167, -76.069000) ... 
+---   10:  FDK, Frederick Municipal                    , Frederick     (39.417583, -77.374306) ... 
+---   11:  FME, Tipton                                 , Odenton       (39.085387, -76.759414) ... 
+---   12:  GAI, Montgomery Co Airpark                  , Gaithersburg  (39.168336, -77.166000) ... 
+---   13:  HGR, Hagerstown Regional-Richard Henson     , Hagerstown    (39.707944, -77.729500) ... 
+---   14:  MTN, Martin State                           , Baltimore     (39.325663, -76.413766) ... 
+---   15:  OXB, Ocean City                             , Ocean City    (38.310444, -75.123972) ... 
+---   16:  SBY, Salisbury-Ocean City: Wicomico Regional, Salisbury     (38.340526, -75.510288) ... 
+---   17:  W29, Bay Bridge Industrial                  , Stevensville  (38.976389, -76.329639) ... 
+---   18:  W41, Crisfield Municipal                    , Crisfield     (38.016790, -75.828821) ... 
+--- ========================================================================================== ... 
+--- 
+--- 
+--- Part 05: Read Maryland boundary and coastline data files ... 
+--- 
+--- MD boundary data ...
+   OBJECTID  ...                                           geometry
+0         1  ...  POLYGON ((-76.23660 37.88653, -76.23714 37.887...
+
+[1 rows x 5 columns]
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 5 columns):
+ #   Column      Non-Null Count  Dtype   
+---  ------      --------------  -----   
+ 0   OBJECTID    1 non-null      int64   
+ 1   State       1 non-null      object  
+ 2   Shape_Leng  1 non-null      float64 
+ 3   Shape_Area  1 non-null      float64 
+ 4   geometry    1 non-null      geometry
+dtypes: float64(2), geometry(1), int64(1), object(1)
+memory usage: 172.0+ bytes
+None
+(1, 5)
+--- MD coastline data ...
+   OBJECTID  ...                                           geometry
+0         1  ...  MULTIPOLYGON (((-76.12498 39.69505, -76.12495 ...
+
+[1 rows x 5 columns]
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 5 columns):
+ #   Column      Non-Null Count  Dtype   
+---  ------      --------------  -----   
+ 0   OBJECTID    1 non-null      int64   
+ 1   Id          1 non-null      int64   
+ 2   Shape_Leng  1 non-null      float64 
+ 3   Shape_Area  1 non-null      float64 
+ 4   geometry    1 non-null      geometry
+dtypes: float64(2), geometry(1), int64(2)
+memory usage: 172.0 bytes
+None
+(1, 5)
+--- 
+--- Part 06: Define geopandas dataframes ... 
+--- 
+     iata  ...                    geometry
+250   2G4  ...  POINT (-79.33942 39.58028)
+289   2W5  ...  POINT (-77.07297 38.60054)
+290   2W6  ...  POINT (-76.55011 38.31536)
+1030  BWI  ...  POINT (-76.66820 39.17540)
+1070  CBE  ...  POINT (-78.76086 39.61542)
+1103  CGE  ...  POINT (-76.03036 38.53931)
+1106  CGS  ...  POINT (-76.92231 38.98058)
+1286  DMW  ...  POINT (-77.00767 39.60828)
+1418  ESN  ...  POINT (-76.06900 38.80417)
+1498  FDK  ...  POINT (-77.37431 39.41758)
+1525  FME  ...  POINT (-76.75941 39.08539)
+1576  GAI  ...  POINT (-77.16600 39.16834)
+1712  HGR  ...  POINT (-77.72950 39.70794)
+2334  MTN  ...  POINT (-76.41377 39.32566)
+2559  OXB  ...  POINT (-75.12397 38.31044)
+2896  SBY  ...  POINT (-75.51029 38.34053)
+3269  W29  ...  POINT (-76.32964 38.97639)
+3273  W41  ...  POINT (-75.82882 38.01679)
+
+[18 rows x 8 columns]
+--- 
+--- Part 07: Create boundary map for Maryland, then add airports ... 
+--- 
+--- ================================================= ... 
+--- Leave TestMarylandAirports01.main()               ... 

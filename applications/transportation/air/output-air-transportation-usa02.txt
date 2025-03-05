@@ -1,0 +1,50 @@
+--- Enter TestAirTransportationUSA02.main()   ... 
+--- ========================================= ... 
+
+--- Part 01: Load data/airports/airports-usa.csv data file ... 
+
+
+--- Part 02: Manually assemble flight path ... 
+
+
+--- Part 03: Create point objects for cities ... 
+
+POINT (-76.668297 39.1754)
+POINT (-122.374821 37.619806)
+
+--- Part 04: Geodesic Calculation for BWI --> SFO flight ... 
+
+--- 1 ...
+[[-76.668297, 39.1754], [-81.183437, 39.848752], [-85.775651, 40.343174], [-90.422661, 40.652923], [-95.099644, 40.77429], [-99.780332, 40.705796], [-104.438277, 40.448277], [-109.048132, 40.004837], [-113.586812, 39.380677], [-118.034414, 38.582827], [-122.374821, 37.619806]]
+--- Textual description of flightpath segments ...
+[[[-76.668297, 39.1754], [-81.183437, 39.848752], [-85.775651, 40.343174], [-90.422661, 40.652923], [-95.099644, 40.77429], [-99.780332, 40.705796], [-104.438277, 40.448277], [-109.048132, 40.004837], [-113.586812, 39.380677], [-118.034414, 38.582827], [-122.374821, 37.619806]]]
+--- Create MultiLineString( linestrings ) object ...
+{"coordinates": [[[-76.668297, 39.1754], [-81.183437, 39.848752], [-85.775651, 40.343174], [-90.422661, 40.652923], [-95.099644, 40.77429], [-99.780332, 40.705796], [-104.438277, 40.448277], [-109.048132, 40.004837], [-113.586812, 39.380677], [-118.034414, 38.582827], [-122.374821, 37.619806]]], "type": "MultiLineString"}
+
+--- Part 05: Geodataframe for cities ... 
+
+
+--- Part 06: Assemble geopandas dataframe for BWI --> SFO flight ...
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 3 columns):
+ #   Column    Non-Null Count  Dtype   
+---  ------    --------------  -----   
+ 0   id        1 non-null      int64   
+ 1   geometry  1 non-null      geometry
+ 2   Airlines  1 non-null      object  
+dtypes: geometry(1), int64(1), object(1)
+memory usage: 156.0+ bytes
+None
+   id                                           geometry Airlines
+0   1  MULTILINESTRING ((-76.66830 39.17540, -81.1834...   United
+
+--- Part 07: Read USA boundary shp file into geopandas ... 
+
+
+--- Part 08: Create USA boundary map + flight layer ... 
+
+--- 
+--- ========================================== ... 
+--- Finished TestAirTransportationUSA01.main() ... 

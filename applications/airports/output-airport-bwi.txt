@@ -1,0 +1,195 @@
+--- Enter TestAirportBWI01.main()                     ... 
+--- ================================================= ... 
+
+
+--- Part 01: Load /data/airports/bwi/bwi-roads.geojson ... 
+--- -------------------------------------------------- ... 
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 271 entries, 0 to 270
+Data columns (total 31 columns):
+ #   Column                Non-Null Count  Dtype   
+---  ------                --------------  -----   
+ 0   osm_id                271 non-null    int64   
+ 1   access                76 non-null     object  
+ 2   highway               271 non-null    object  
+ 3   name                  69 non-null     object  
+ 4   surface               8 non-null      object  
+ 5   foot                  10 non-null     object  
+ 6   width                 4 non-null      object  
+ 7   bridge                17 non-null     object  
+ 8   layer                 17 non-null     object  
+ 9   ref                   14 non-null     object  
+ 10  railway               1 non-null      object  
+ 11  bicycle               3 non-null      object  
+ 12  service               87 non-null     object  
+ 13  oneway                87 non-null     object  
+ 14  tracktype             1 non-null      object  
+ 15  horse                 2 non-null      object  
+ 16  tunnel                2 non-null      object  
+ 17  name_1                1 non-null      object  
+ 18  maxspeed              12 non-null     object  
+ 19  rcn                   4 non-null      object  
+ 20  lanes                 22 non-null     object  
+ 21  old_railway_operator  1 non-null      object  
+ 22  hgv                   6 non-null      object  
+ 23  noref                 7 non-null      object  
+ 24  FIXME:hgv             4 non-null      object  
+ 25  sidewalk              2 non-null      object  
+ 26  access_control        2 non-null      object  
+ 27  destination:ref       1 non-null      object  
+ 28  destination           1 non-null      object  
+ 29  destination:ref:to    1 non-null      object  
+ 30  geometry              271 non-null    geometry
+dtypes: geometry(1), int64(1), object(29)
+memory usage: 65.8+ KB
+None
+(271, 31)
+
+--- Part 02: Load data/airports/bwi/bwi-buildings.geojson ... 
+--- ----------------------------------------------------- ... 
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 51 entries, 0 to 50
+Data columns (total 12 columns):
+ #   Column            Non-Null Count  Dtype   
+---  ------            --------------  -----   
+ 0   osm_id            51 non-null     int64   
+ 1   addr:housenumber  7 non-null      object  
+ 2   addr:housename    1 non-null      object  
+ 3   building          51 non-null     object  
+ 4   name              7 non-null      object  
+ 5   amenity           4 non-null      object  
+ 6   tourism           1 non-null      object  
+ 7   aeroway           5 non-null      object  
+ 8   shop              1 non-null      object  
+ 9   addr:postcode     5 non-null      object  
+ 10  addr:street       6 non-null      object  
+ 11  geometry          51 non-null     geometry
+dtypes: geometry(1), int64(1), object(10)
+memory usage: 4.9+ KB
+None
+(51, 12)
+
+--- Part 03: Load data/airports/bwi/bwi-stations.geojson ... 
+--- ---------------------------------------------------- ... 
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 4 columns):
+ #   Column    Non-Null Count  Dtype   
+---  ------    --------------  -----   
+ 0   osm_id    1 non-null      int64   
+ 1   name      1 non-null      object  
+ 2   railway   1 non-null      object  
+ 3   geometry  1 non-null      geometry
+dtypes: geometry(1), int64(1), object(2)
+memory usage: 164.0+ bytes
+None
+(1, 4)
+
+--- Part 04: Load data/airports/bwi/bwi-amenity-polygons.geojson ... 
+--- ------------------------------------------------------------ ... 
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 23 entries, 0 to 22
+Data columns (total 19 columns):
+ #   Column            Non-Null Count  Dtype   
+---  ------            --------------  -----   
+ 0   osm_id            23 non-null     int64   
+ 1   amenity           17 non-null     object  
+ 2   access            5 non-null      object  
+ 3   leisure           2 non-null      object  
+ 4   building          6 non-null      object  
+ 5   name              10 non-null     object  
+ 6   aeroway           2 non-null      object  
+ 7   tourism           1 non-null      object  
+ 8   shop              1 non-null      object  
+ 9   addr:housenumber  1 non-null      object  
+ 10  parking           11 non-null     object  
+ 11  icao              1 non-null      object  
+ 12  iata              1 non-null      object  
+ 13  aerodrome:type    1 non-null      object  
+ 14  addr:state        1 non-null      object  
+ 15  fee               4 non-null      object  
+ 16  addr:postcode     1 non-null      object  
+ 17  addr:street       1 non-null      object  
+ 18  geometry          23 non-null     geometry
+dtypes: geometry(1), int64(1), object(17)
+memory usage: 3.5+ KB
+None
+(23, 19)
+
+--- Part 05: Load data/airports/bwi/bwi-amenity-points.geojson ... 
+--- ---------------------------------------------------------- ... 
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 4 columns):
+ #   Column            Non-Null Count  Dtype   
+---  ------            --------------  -----   
+ 0   osm_id            2 non-null      int64   
+ 1   addr:housenumber  2 non-null      object  
+ 2   addr:street       1 non-null      object  
+ 3   geometry          2 non-null      geometry
+dtypes: geometry(1), int64(1), object(2)
+memory usage: 196.0+ bytes
+None
+(2, 4)
+
+--- Part 06: Load data/airports/bwi/bwi-forests.geojson ... 
+--- --------------------------------------------------- ... 
+
+<class 'geopandas.geodataframe.GeoDataFrame'>
+RangeIndex: 14 entries, 0 to 13
+Data columns (total 3 columns):
+ #   Column    Non-Null Count  Dtype   
+---  ------    --------------  -----   
+ 0   osm_id    14 non-null     int64   
+ 1   natural   14 non-null     object  
+ 2   geometry  14 non-null     geometry
+dtypes: geometry(1), int64(1), object(1)
+memory usage: 468.0+ bytes
+None
+(14, 3)
+
+--- Part 07: Iterate over road dataframe columns ... 
+--- -------------------------------------------- ... 
+
+--- Col   0: osm_id ...
+--- Col   1: access ...
+--- Col   2: highway ...
+--- Col   3: name ...
+--- Col   4: surface ...
+--- Col   5: foot ...
+--- Col   6: width ...
+--- Col   7: bridge ...
+--- Col   8: layer ...
+--- Col   9: ref ...
+--- Col  10: railway ...
+--- Col  11: bicycle ...
+--- Col  12: service ...
+--- Col  13: oneway ...
+--- Col  14: tracktype ...
+--- Col  15: horse ...
+--- Col  16: tunnel ...
+--- Col  17: name_1 ...
+--- Col  18: maxspeed ...
+--- Col  19: rcn ...
+--- Col  20: lanes ...
+--- Col  21: old_railway_operator ...
+--- Col  22: hgv ...
+--- Col  23: noref ...
+--- Col  24: FIXME:hgv ...
+--- Col  25: sidewalk ...
+--- Col  26: access_control ...
+--- Col  27: destination:ref ...
+--- Col  28: destination ...
+--- Col  29: destination:ref:to ...
+--- Col  30: geometry ...
+
+--- Part 08: Plot geodataframe layers ... 
+--- -------------------------------------------- ... 
+
+--- ===================================== ... 
+--- Leave TestAirportBWI01.main()         ... 
